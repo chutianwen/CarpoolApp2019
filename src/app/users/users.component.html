@@ -1,9 +1,44 @@
-<p>
-  users works!
-</p>
-
 <ul>
   <li *ngFor="let user of users">
-    {{user.userName}};{{user.address}}
+    {{user.userName}};{{user.address}};{{user.arrival}}
   </li>
 </ul>
+
+<input type="text" [(ngModel)]="searchText" placeholder="Search for Users" class="col-lg-8">
+
+<table class="table">
+  <thead>
+  <tr>
+    <th class="left">Name</th>
+    <th width="100">Arrival</th>
+    <th width="100">Departure</th>
+    <th width="80">Driver?</th>
+    <th class="left">Address</th>
+    <th width="80">Price</th>
+    <th width="80">Comment</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users | usernamefilter: searchText">
+    <td class="left">{{user.userName}}</td>
+    <td>{{user.arrival}}</td>
+    <td>{{user.departure }}</td>
+    <td>{{user.role}}</td>
+    <td class="left">{{user.address}}</td>
+    <td>{{user.price}}</td>
+    <td>
+      <clr-signpost *ngIf="user.memo || user.phone">
+        <clr-signpost-content [clrPosition]="'top-left'" *clrIfOpen >
+          <h5>Memo</h5>
+          <p>Note: {{user.memo}}</p>
+          <p>Contact: {{user.phone}}</p>
+        </clr-signpost-content>
+      </clr-signpost>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-primary" (click)="toggleMove()">
+  <clr-icon shape="plus"></clr-icon> &nbsp;ADD My Info
+</button>

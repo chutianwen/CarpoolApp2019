@@ -7,6 +7,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { UsersComponent } from './users/users.component';
 import {environment} from '../environments/environment';
+import {AngularFirestore} from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
+import {UserFilterPipe} from './users/user.filter.pipe';
+import { ClarityModule } from '@clr/angular';
+
 // import { AgmCoreModule } from '@agm/core';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -14,12 +19,15 @@ import {environment} from '../environments/environment';
   declarations: [
     AppComponent,
     CarpoolMapComponent,
-    UsersComponent
+    UsersComponent,
+    UserFilterPipe,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ClarityModule
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyBcm5AnNDQq_IOMjSJ3bnw-96Y3TSYFKDE',
     //   libraries: ['places']
@@ -27,7 +35,7 @@ import {environment} from '../environments/environment';
     // AngularFirestoreModule.enablePersistence(),
     // AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
