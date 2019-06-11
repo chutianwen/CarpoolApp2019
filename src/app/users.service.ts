@@ -5,7 +5,7 @@ import {User} from './user';
 
 const Collection = 'userActivityCollection';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: `root` })
 export class UsersService {
   constructor(private db: AngularFirestore) {
   }

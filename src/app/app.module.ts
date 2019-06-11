@@ -11,6 +11,8 @@ import {AngularFirestore} from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import {UserFilterPipe} from './users/user.filter.pipe';
 import { ClarityModule } from '@clr/angular';
+import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './about/about.component';
 
 // import { AgmCoreModule } from '@agm/core';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -21,13 +23,15 @@ import { ClarityModule } from '@clr/angular';
     CarpoolMapComponent,
     UsersComponent,
     UserFilterPipe,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    ClarityModule
+    ClarityModule,
+    AppRoutingModule
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyBcm5AnNDQq_IOMjSJ3bnw-96Y3TSYFKDE',
     //   libraries: ['places']
