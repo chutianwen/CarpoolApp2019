@@ -1,3 +1,9 @@
 <p>
   carpool-map works!
 </p>
+
+<ul *ngIf="usersWithLoc">
+  <li *ngFor="let userWithLoc of usersWithLoc">
+    {{userWithLoc.user.userName}};{{userWithLoc.user.address}};{{userWithLoc.loc.lng}}; {{userWithLoc.loc.lat}}
+  </li>
+</ul>

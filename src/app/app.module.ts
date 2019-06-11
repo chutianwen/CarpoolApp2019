@@ -13,6 +13,7 @@ import {UserFilterPipe} from './users/user.filter.pipe';
 import { ClarityModule } from '@clr/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
+import {AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core';
 
 // import { AgmCoreModule } from '@agm/core';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -31,15 +32,15 @@ import { AboutComponent } from './about/about.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     ClarityModule,
-    AppRoutingModule
-    // AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyBcm5AnNDQq_IOMjSJ3bnw-96Y3TSYFKDE',
-    //   libraries: ['places']
-    // }),
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBcm5AnNDQq_IOMjSJ3bnw-96Y3TSYFKDE',
+      libraries: ['places']
+    }),
     // AngularFirestoreModule.enablePersistence(),
     // AngularFirestoreModule,
   ],
-  providers: [AngularFirestore],
+  providers: [AngularFirestore, GoogleMapsAPIWrapper],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
