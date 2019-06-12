@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Update to Angular6 by following steps in 
 https://stackoverflow.com/questions/50307628/angular-injectable-decorator-expected-0-arguments-but-got-1
+
+Clarity doc:
+https://medium.com/@beeman/tutorial-project-clarity-and-angular-cli-50d845a24d5b

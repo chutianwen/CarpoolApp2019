@@ -28,7 +28,6 @@ export class CarpoolMapComponent implements OnInit {
   }
 
   ngOnInit() {
-    // alert(`usersWithLoc: ${this.usersWithLoc.length}`);
     // this.userService.getUsers().subscribe(users => this.geoCodeService.geoCodeUserSync(users, this.usersWithLoc));
     // this.geoCodeService.geocodeAddress(addressExample).subscribe(loc => console.log(`addressExample ${loc.lat}`));
     // this.geoCodeService.geocodeUser(userExample).subscribe(loc => console.log(`${userExample.address} ${loc.loc.lng}`));
