@@ -4,15 +4,54 @@
   <meta charset="utf-8">
   <title>CarPoolApp</title>
   <base href="/">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcm5AnNDQq_IOMjSJ3bnw-96Y3TSYFKDE&libraries=places&language=en"></script>
 
-  <!--<link rel="stylesheet" href="../node_modules/clarity-icons/clarity-icons.min.css">-->
-  <!--<script src="../node_modules/@webcomponents/custom-elements/custom-elements.min.js"></script>-->
-  <!--<script src="../node_modules/clarity-icons/clarity-icons.min.js"></script>-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcm5AnNDQq_IOMjSJ3bnw-96Y3TSYFKDE&libraries=places&language=en"></script>
+  <script src="https://unpkg.com/@webcomponents/custom-elements"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/clarity-icons/clarity-icons.min.css">
+
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="country-wrap">
+      <div class="street">
+        <div class="car">
+          <!--<div class="car-base"></div>-->
+          <div class="car-body">
+            <div class="car-top-back">
+              <div class="back-curve"></div>
+            </div>
+            <div class="car-gate"></div>
+            <div class="car-top-front">
+              <div class="wind-sheild"></div>
+            </div>
+            <div class="bonet-front"></div>
+            <div class="stepney"></div>
+          </div>
+          <div class="boundary-tyre-cover">
+            <div class="boundary-tyre-cover-back-bottom"></div>
+            <div class="boundary-tyre-cover-inner"></div>
+          </div>
+          <div class="tyre-cover-front">
+            <div class="boundary-tyre-cover-inner-front"></div>
+          </div>
+          <div class="base-axcel">
+
+          </div>
+          <div class="front-bumper"></div>
+          <div class="tyre">
+            <div class="gap"></div>
+          </div>
+          <div class="tyre front">
+            <div class="gap"></div>
+          </div>
+          <div class="car-shadow"></div>
+        </div>
+      </div>
+      <div class="street-stripe"></div>
+    </div>
+  </app-root>
 </body>
 </html>

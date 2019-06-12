@@ -1,13 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
 @import "~ng-pick-datetime/assets/style/picker.min.css";
-/*@import "~ng-pick-datetime/assets/style/picker.min.css";*/
-/*// @import "../node_modules/clarity-ui/src/utils/dependencies.clarity";*/
-/*// @import "../node_modules/clarity-ui/src/utils/components.clarity";*/
+// @import "../node_modules/clarity-ui/src/utils/dependencies.clarity";
+// @import "../node_modules/clarity-ui/src/utils/components.clarity";
 
-/*$darkblue:#233E66;*/
-/*$blue:#0082D1;*/
-/*$red:#FB483D;*/
-/*$clr-btn-primary-bg-color:$darkblue;*/
-/*$cd:#eee;*/
+$darkblue:#233E66;
+$blue:#0082D1;
+$red:#FB483D;
+$clr-btn-primary-bg-color:$darkblue;
+$cd:#eee;
 .btn-primary .btn, .btn.btn-primary{
   background-color: $blue;
   border-color:$blue;
@@ -39,7 +39,7 @@ input[type=select]:not([readonly]),.select{
 input[type=text]:active,input[type=password]:active, input[type=number]:active, input[type=email]:active, input[type=url]:active, input[type=tel]:active, input[type=date]:active, input[type=time]:active, input[type=datetime-local]:active{
   outline: 0;
   border-color: #0082D1;
-/*// box-shadow: 0 0 3px #0070D2;*/
+  // box-shadow: 0 0 3px #0070D2;
   transition: border 0.1s linear, background-color 0.1s linear;
   background: none;
   background-color: white;
@@ -48,7 +48,7 @@ input[type=text]:focus,input[type=password]:focus, input[type=number]:focus, inp
 input[type=tel]:focus, input[type=date]:focus, input[type=time]:focus, input[type=datetime-local]:focus, textarea:focus{
   outline: 0;
   border-color: $blue;
-/*// box-shadow: 0 0 3px #0070D2;*/
+  // box-shadow: 0 0 3px #0070D2;
   transition: border 0.1s linear, background-color 0.1s linear;
   background: none;
   background-color: white;
@@ -64,22 +64,22 @@ input[type=tel]:focus, input[type=date]:focus, input[type=time]:focus, input[typ
   border-color: #9c0c03 !important;
 }
 
-/*//-------------------Navigation-----------------------*/
-  .header-triangle{
-    position: relative;
-    top: 0;
+//-------------------Navigation-----------------------
+.header-triangle{
+  position: relative;
+  top: 0;
   //left: -70px;
-    -webkit-transform: skew(-30deg);
-    transform: skew(-30deg);
-    background: linear-gradient(30deg,#0082d1,#99cded);
-    opacity: 1;
-    height:60px;
-    width:180px;
-    display: inline-block;
-    box-shadow:0 2px 2px 0 rgba(0,0,0,.14), 1px 0px 5px 0 rgba(0,0,0,.12);
-    cursor:pointer;
-    z-index: 0;
-  }
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
+  background: linear-gradient(30deg,#0082d1,#99cded);
+  opacity: 1;
+  height:60px;
+  width:180px;
+  display: inline-block;
+  box-shadow:0 2px 2px 0 rgba(0,0,0,.14), 1px 0px 5px 0 rgba(0,0,0,.12);
+  cursor:pointer;
+  z-index: 0;
+}
 
 .header-triangle:before{
   content:"";
@@ -128,22 +128,22 @@ input[type=tel]:focus, input[type=date]:focus, input[type=time]:focus, input[typ
   }
 }
 
-/*//----------------Component---------------*/
-  app-nav{
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 1;
-    right: 0;
-  }
+//----------------Component---------------
+app-nav{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 1;
+  right: 0;
+}
 
 .addActivity {
   background: #f6f6f6;
   padding: 1rem;
-  /*position:fixed;*/
+  position:fixed;
   left: 0;
   width: 100%;
-  /*bottom: -450px;*/
+  bottom: -450px;
   box-shadow: 0 4px $blue inset;
 }
 
@@ -154,7 +154,7 @@ input[type=tel]:focus, input[type=date]:focus, input[type=time]:focus, input[typ
   padding: 0.3rem 1.5rem 1.8rem;
 }
 
-/*//----------------Loading---------------*/
+//----------------Loading---------------
 @charset "utf-8";
 /* CSS Document */
 body, html {
