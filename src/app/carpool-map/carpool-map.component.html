@@ -4,6 +4,7 @@
 
 <ul *ngIf="usersWithLoc">
   <li *ngFor="let userWithLoc of usersWithLoc">
+    {{usersWithLoc.length}}
     {{userWithLoc.user.userName}};{{userWithLoc.user.address}};{{userWithLoc.loc.lng}}; {{userWithLoc.loc.lat}}
   </li>
 </ul>

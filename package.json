@@ -30,6 +30,7 @@
     "firebase": "^6.1.1",
     "geocoder": "^0.2.3",
     "google-geocoder": "^0.2.1",
+    "google-geocoding": "^0.1.7",
     "google-maps-geocoder": "^1.0.1",
     "node-geocoder": "^3.23.0",
     "rxjs": "^6.5.2",
