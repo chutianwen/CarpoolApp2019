@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Update to Angular6 by following steps in 
+https://stackoverflow.com/questions/50307628/angular-injectable-decorator-expected-0-arguments-but-got-1
