@@ -1,18 +1,13 @@
+<br>
+<br>
 <button (click)="addressSwitch()" class="button">{{addressSwitchName}}</button>
-
-<ul *ngIf="usersWithLoc">
-  <li *ngFor="let userWithLoc of usersWithLoc">
-    {{usersWithLoc.length}}
-    {{userWithLoc.user.userName}};{{userWithLoc.user.address}};{{userWithLoc.loc.lng}}; {{userWithLoc.loc.lat}}
-  </li>
-</ul>
-
 <agm-map class="mapview"
          [latitude]="38.9459997"
          [longitude]="-77.32774049999999"
          [zoom]="10"
          [disableDefaultUI]="false"
          [zoomControl]="false">
+
   <div *ngIf="showAddress">
     <agm-marker
       *ngFor="let userWithLoc of usersWithLoc"
