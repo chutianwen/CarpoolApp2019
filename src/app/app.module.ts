@@ -16,6 +16,13 @@ import { AboutComponent } from './about/about.component';
 import {AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
+import {GooglePlaceModule} from 'ngx-google-places-autocomplete';
+import { FinProComponent } from './fin-pro/fin-pro.component';
+import { EmploymentComponent } from './employment/employment.component';
+import { SummaryComponent } from './summary/summary.component';
+import { SummaryTessComponent } from './summary-tess/summary-tess.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 // import { AgmCoreModule } from '@agm/core';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -27,10 +34,16 @@ import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
     UsersComponent,
     UserFilterPipe,
     AboutComponent,
+    FinProComponent,
+    EmploymentComponent,
+    SummaryComponent,
+    SummaryTessComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    AngularFontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     ClarityModule,
@@ -42,7 +55,8 @@ import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
     BrowserAnimationsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GooglePlaceModule,
     // AngularFirestoreModule.enablePersistence(),
     // AngularFirestoreModule,
   ],

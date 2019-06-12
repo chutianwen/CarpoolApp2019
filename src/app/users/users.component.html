@@ -7,7 +7,6 @@
   <clr-icon shape="plus"></clr-icon> &nbsp;ADD My Info
 </button>
 <form class="addActivity" [@focusPanel]="state">
-
   <section class="form-block">
     <h3>Add My Info</h3>
     <!--<p>To update your info, entering the same name and system will automatically replace the existing record with your new data. </p>-->
@@ -21,7 +20,6 @@
       <div class="col-lg-3"><input [owlDateTimeTrigger]="dt"
                                    [owlDateTime]="dt" [(ngModel)]="arrival"
                                    name="arrival" type="text" placeholder="9:00 A.M."/></div>
-      <!--<input [(ngModel)]="arrival" name="arrival" type="text" placeholder="9:00 A.M."/>-->
       <!-- Time to leave office -->
       <div class="col-lg-1"><label>Departure</label></div>
       <owl-date-time [pickerType]="'timer'" #dt2></owl-date-time>
@@ -29,7 +27,6 @@
                                    [owlDateTime]="dt2" [(ngModel)]="departure"
                                    name="departure" type="text" placeholder="5:00 P.M."/></div>
     </div>
-
     <div class="row">
       <div class="col-lg-1"><label>Role</label></div>
       <div class="col-lg-3">
@@ -39,32 +36,17 @@
           <option value="Both">Driver & Rider</option>
         </select>
       </div>
-      <!--<div class="col-lg-1"><label>Role</label></div>-->
-      <!--<div class="col-lg-3">-->
-      <!--<div class="checkbox">-->
-      <!--<input type="checkbox" id="checkrads_1" value="Driver">-->
-      <!--<label for="checkrads_1">Driver</label>-->
-      <!--<input type="checkbox" id="checkrads_2">-->
-      <!--<label for="checkrads_2" value="Rider">Rider</label>-->
-      <!--</div>-->
-      <!--</div>-->
 
+      <!--Trip price-->
       <div class="col-lg-1"><label>Trip Fare</label></div>
       <div class="col-lg-3"><input [(ngModel)]="price" name="price" type="number" placeholder="Trip Fare"/></div>
-
     </div>
 
     <div class="row">
       <div class="col-lg-1"><label>Address</label></div>
-      <!--<ng4geo-autocomplete [userSettings]="userSettings" (componentCallback)="autoCompleteCallback($event)"></ng4geo-autocomplete>-->
-      <input [(ngModel)]="address" name="address" type="text" />
-
-      <!--<div class="col-lg-7"><input placeholder="search for location" spellcheck="off" type="text" class="form-control col-lg-10"-->
-                                   <!--#search [formControl]="searchControl"  ></div>-->
-
+      <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
       <div class="col-lg-1"><label>Contact</label></div>
       <div class="col-lg-3"><input [(ngModel)]="phone" name="phone" type="number" placeholder="(xxx)-xxx-xxxx"/></div>
-
     </div>
 
     <div class="row">
@@ -72,18 +54,14 @@
       <div class="col-lg-11">
         <textarea [(ngModel)]="memo" name="memo" type="text" placeholder="" rows="2"></textarea>
       </div>
-      <!--<textarea [(ngModel)]="memo" name="memo" placeholder="Any preferences or restrictions"></textarea>-->
     </div>
-
-
     <button class="btn btn-primary" (click)="submitUser()">Submit</button>
     <button class="btn btn-link" (click)="toggleMove()">Cancel</button>
   </section>
 </form>
 
-
+<!--Users table-->
 <input type="text" [(ngModel)]="searchText" placeholder="Search for Users" class="col-lg-8">
-
 <table class="table">
   <thead>
   <tr>
@@ -116,8 +94,3 @@
   </tr>
   </tbody>
 </table>
-
-<!--<button class="btn btn-primary" (click)="toggleMove()">-->
-<!--<clr-icon shape="plus"></clr-icon> &nbsp;ADD My Info-->
-<!--</button>-->
-

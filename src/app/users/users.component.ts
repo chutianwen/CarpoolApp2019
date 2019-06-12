@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {User} from '../user';
 import {UsersService} from '../users.service';
 import {FormControl} from '@angular/forms';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {GooglePlaceDirective} from 'ngx-google-places-autocomplete';
+import {Address} from 'ngx-google-places-autocomplete/objects/address';
 
 @Component({
   selector: 'app-users',
@@ -41,6 +43,12 @@ export class UsersComponent implements OnInit {
   state: string = 'inactive';
 
   users: User[];
+  @ViewChild('placesRef', {static: true}) placesRef: GooglePlaceDirective;
+
+  public handleAddressChange(address: Address) {
+    this.address = address.name;
+  }
+
   constructor(private userService: UsersService) { }
   ngOnInit() {
     this.userService.getUsers().subscribe(users => this.users = users);
@@ -64,6 +72,9 @@ export class UsersComponent implements OnInit {
       this.userService.submitUser(userNew);
     }
     this.address = '';
+  }
 
+  toggleMove() {
+    this.state = (this.state === 'inactive' ? 'active' : 'inactive');
   }
 }
