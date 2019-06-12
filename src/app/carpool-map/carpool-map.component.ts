@@ -20,6 +20,8 @@ const addressExample = 'Germantown Rd, Germantown, MD';
 export class CarpoolMapComponent implements OnInit {
 
   usersWithLoc: UserWithLoc[] = [];
+  showAddress: Boolean = true;
+  addressSwitchName: String = 'hide address';
 
   constructor(private userService: UsersService,
               private geoCodeService: GeocodeService) {
@@ -51,4 +53,14 @@ export class CarpoolMapComponent implements OnInit {
     return users.map(user => this.geoCodeService.geocodeUser(user));
   }
 
+  addressSwitch() {
+    // if true, means user hit 'hide'
+    if (this.showAddress){
+      this.showAddress = false;
+      this.addressSwitchName = 'show address';
+    } else{
+      this.showAddress = true;
+      this.addressSwitchName = 'hide address';
+    }
+  }
 }
