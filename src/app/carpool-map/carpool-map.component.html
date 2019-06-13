@@ -1,6 +1,3 @@
-<br>
-<br>
-<button (click)="addressSwitch()" class="button">{{addressSwitchName}}</button>
 <agm-map class="mapview"
          [latitude]="38.9459997"
          [longitude]="-77.32774049999999"
@@ -24,4 +21,6 @@
   </div>
 </agm-map>
 
-
+<button class="btn btn-primary btn-add" (click)="toggleMove()">
+  <clr-icon shape="plus"></clr-icon> &nbsp;ADD {{addressSwitchName}}
+</button>

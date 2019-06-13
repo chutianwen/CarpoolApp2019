@@ -14,14 +14,14 @@ export class EmploymentComponent implements OnInit {
     {firm: 'CORNELL UNIVERSITY',status: '', date: 'Aug 1989 - May 1993', location:'ITHECA, NY', position:'STUDENT - STUDENT'},
     {firm: 'MERRICK WOODS COUNTY DAY CAMP', status: '', date: 'Jun 1991 - Aug 1991', location:'FREEPORT, NY', position:'OTHER - PURCHASING'},
     {firm: 'INC. VILLAGE OF FREEPORT', status: '', date: 'May 1990 - Aug 1990', location:'LIDO BECCH, NY', position:'OTHER - SUMMER STAFF'}
-  ]
+  ];
   registration: Reg[] = [
     {regulator: 'New York', category: 'AG', status_date: '05/02/2001', status: 'Termed', approval_date:'11/10/1999'},
     {regulator: 'FINRA', category: 'ET', status_date: '05/02/2001', status: 'Termed', approval_date:'11/03/1999'},
     {regulator: '', category: 'FN', status_date: '05/02/2001', status: 'Termed Without Registration', approval_date:''},
     {regulator: '', category: 'GP', status_date: '05/02/2001', status: 'Termed', approval_date:'11/01/1999'},
     {regulator: '', category: 'GS', status_date: '05/02/2001', status: 'Termed', approval_date:'11/01/1999'}
-  ]
+  ];
 
   exam: Exam[] = [
     {name: 'S4 - Registered Options Principal Examination', color: 'colordblue', icon: 'clock' , text: 'Pending', date: 'Apr 12, 1993'},
@@ -35,7 +35,7 @@ export class EmploymentComponent implements OnInit {
     },
     {name: 'S24 - General Securities Principal Examination', color: 'colorgreen', icon: 'check' , text: 'Passed', date: 'Apr 12, 1993'},
     {name: 'S27 - Financial and Operations Principal Examination', color: 'colorred', icon: 'times', text: 'Failed', date: 'Jan 8, 2001'}
-  ]
+  ];
 
   disclosure: Disclosure[] = [
     {type: 'Civil Judicial Action', count: 1, label_class:'label-danger'},
@@ -43,7 +43,7 @@ export class EmploymentComponent implements OnInit {
     {type: 'Judgment/Lien', count: 1, label_class:'label-danger'},
     {type: 'Regulatory Actions', count: 5, label_class:'label-danger'},
     {type: 'Customer Complaints', count: 9, label_class:''},
-  ]
+  ];
 
   disclosure_record: DisclosureRecord[] = [
     {name: 'Civil Judicial Action', id: 1645909, status: 'current',
@@ -63,7 +63,7 @@ export class EmploymentComponent implements OnInit {
         { document:'U4', initiate:'Cambridge Capital, LLC (41464)', event_date:'Jun 19, 1996', report_date:'Jul 7, 1999'}
       ]
     },
-  ]
+  ];
 
   constructor() { }
 
