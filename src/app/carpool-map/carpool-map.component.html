@@ -11,13 +11,13 @@
   <div *ngIf="showAddress">
     <agm-marker
       *ngFor="let userWithLoc of usersWithLoc"
-      [latitude]="userWithLoc.loc.lat"
-      [longitude]="userWithLoc.loc.lng">
+      [latitude]="userWithLoc.lat"
+      [longitude]="userWithLoc.lng">
 
       <agm-info-window>
-        <strong>{{userWithLoc.user.userName}}</strong><br/>
-        <span>{{userWithLoc.user.role}}</span><br/>
-        <span>{{userWithLoc.user.phone}}</span><br/>
+        <strong>{{userWithLoc.userName}}</strong><br/>
+        <span>{{userWithLoc.role}}</span><br/>
+        <span>{{userWithLoc.phone}}</span><br/>
         <!--<span>{{userWithLoc.user.arrival | date:'shortTime'}}-{{marker.departure | date:'shortTime'}}</span><br/>-->
       </agm-info-window>
     </agm-marker>

@@ -1,7 +1,6 @@
 import {User} from './user';
-import {Location} from './location-model';
 
-export class UserWithLoc {
-  user: User;
-  loc: Location;
+export class UserWithLoc extends User {
+  lat: number;
+  lng: number;
 }

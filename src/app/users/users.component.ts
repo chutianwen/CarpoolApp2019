@@ -5,7 +5,9 @@ import {FormControl} from '@angular/forms';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {GooglePlaceDirective} from 'ngx-google-places-autocomplete';
 import {Address} from 'ngx-google-places-autocomplete/objects/address';
-
+import {UserWithLoc} from '../userwithloc';
+import Timestamp = firestore.Timestamp;
+import {firestore} from 'firebase';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -29,20 +31,22 @@ import {Address} from 'ngx-google-places-autocomplete/objects/address';
 export class UsersComponent implements OnInit {
   searchText: string;
 
+  // ng binding, user input
   userName: string;
-  arrival: string;
-  departure: string;
+  arrival: Timestamp;
+  departure: Timestamp;
   role: string;
   address: string;
   phone: string;
   price: number;
-  memo: string;
+  memo: string ;
 
   searchControl: FormControl;
   // defining animation state
-  state: string = 'inactive';
+  state = 'inactive';
 
-  users: User[];
+  users: UserWithLoc[];
+
   @ViewChild('placesRef', {static: true}) placesRef: GooglePlaceDirective;
 
   public handleAddressChange(address: Address) {
@@ -55,9 +59,8 @@ export class UsersComponent implements OnInit {
     this.searchControl = new FormControl();
   }
 
-  submitUser(){
-    alert(this.address);
-    if(this.address){
+  submitUser() {
+    if (this.isValid()) {
       console.log(`Submit address: ${this.address}`);
       const userNew = {
         userName: this.userName,
@@ -70,11 +73,18 @@ export class UsersComponent implements OnInit {
         memo: this.memo
       };
       this.userService.submitUser(userNew);
+    } else {
+      alert('user name, address, departure and arrival not provided');
     }
-    this.address = '';
+    // this.address = '';
   }
 
   toggleMove() {
     this.state = (this.state === 'inactive' ? 'active' : 'inactive');
+  }
+
+  isValid() {
+    return this.userName && this.address;
+    // return this.userName && this.address && this.departure && this.arrival;
   }
 }

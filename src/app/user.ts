@@ -1,7 +1,10 @@
+import Timestamp = firestore.Timestamp;
+import {firestore} from 'firebase';
+
 export class User {
   userName: string;
-  arrival: string;
-  departure: string;
+  arrival: Timestamp;
+  departure: Timestamp;
   role: string;
   address: string;
   phone: string;
