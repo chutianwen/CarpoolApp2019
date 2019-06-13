@@ -11,6 +11,7 @@ export const environment = {
     databaseURL: 'https://task-list-angular.firebaseio.com',
     projectId: 'task-list-angular',
     storageBucket: 'task-list-angular.appspot.com',
-    messagingSenderId: '410530619389'
+    messagingSenderId: '410530619389',
   }
 };
+
