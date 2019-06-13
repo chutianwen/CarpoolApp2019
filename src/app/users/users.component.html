@@ -72,8 +72,8 @@
   <tbody *ngIf="users">
   <tr *ngFor="let user of users | usernamefilter: searchText">
     <td class="left">{{user.userName}}</td>
-    <td>{{user.arrival}}</td>
-    <td>{{user.departure }}</td>
+    <td>{{user.arrival | datefilter}}</td>
+    <td>{{user.departure | datefilter}}</td>
     <td>{{user.role}}</td>
     <td class="left">{{user.address}}</td>
     <td>{{user.price}}</td>

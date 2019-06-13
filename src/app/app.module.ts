@@ -23,6 +23,7 @@ import {SummaryComponent} from './summary/summary.component';
 import {SummaryTessComponent} from './summary-tess/summary-tess.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import {DateFilterPipe} from './users/date.filter.pipe';
 
 // import { AgmCoreModule } from '@agm/core';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -33,6 +34,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     CarpoolMapComponent,
     UsersComponent,
     UserFilterPipe,
+    DateFilterPipe,
     AboutComponent,
     FinProComponent,
     EmploymentComponent,
