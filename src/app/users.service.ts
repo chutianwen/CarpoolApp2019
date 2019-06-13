@@ -4,6 +4,8 @@ import {Observable} from 'rxjs/Observable';
 import {User} from './user';
 import {GeocodeService} from './geocode.service';
 import {UserWithLoc} from './userwithloc';
+import * as firebase from 'firebase';
+import 'firebase/firestore';
 
 // userActivityCollection
 const Collection = 'carpool';
