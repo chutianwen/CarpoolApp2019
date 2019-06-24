@@ -30,6 +30,8 @@ export class GeocodeService {
     );
   }
 
+
+  
   zipLocToUser(user: User, lat: number, lng: number) {
     const userWithLoc: UserWithLoc = {
       userName: user.userName,

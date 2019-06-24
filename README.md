@@ -31,3 +31,6 @@ https://stackoverflow.com/questions/50307628/angular-injectable-decorator-expect
 
 Clarity doc:
 https://medium.com/@beeman/tutorial-project-clarity-and-angular-cli-50d845a24d5b
+
+Deploy:
+`ng build --prod --output-path docs --base-href https://chutianwen.github.io/CarpoolApp2019/`
